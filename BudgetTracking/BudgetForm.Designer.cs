@@ -43,7 +43,9 @@
             this.textBoxPrice = new System.Windows.Forms.TextBox();
             this.comboBoxCategory = new System.Windows.Forms.ComboBox();
             this.pictureBoxLargestItem = new System.Windows.Forms.PictureBox();
+            this.pictureBoxLargestGroup = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLargestItem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLargestGroup)).BeginInit();
             this.SuspendLayout();
             // 
             // labelSingleItem
@@ -191,12 +193,21 @@
             this.pictureBoxLargestItem.TabIndex = 19;
             this.pictureBoxLargestItem.TabStop = false;
             // 
+            // pictureBoxLargestGroup
+            // 
+            this.pictureBoxLargestGroup.Location = new System.Drawing.Point(406, 103);
+            this.pictureBoxLargestGroup.Name = "pictureBoxLargestGroup";
+            this.pictureBoxLargestGroup.Size = new System.Drawing.Size(372, 289);
+            this.pictureBoxLargestGroup.TabIndex = 20;
+            this.pictureBoxLargestGroup.TabStop = false;
+            // 
             // BudgetForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1162, 714);
+            this.Controls.Add(this.pictureBoxLargestGroup);
             this.Controls.Add(this.pictureBoxLargestItem);
             this.Controls.Add(this.comboBoxCategory);
             this.Controls.Add(this.textBoxPrice);
@@ -216,6 +227,7 @@
             this.Text = "BudgetTracking";
             this.Load += new System.EventHandler(this.BudgetForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLargestItem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLargestGroup)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,6 +250,7 @@
         private System.Windows.Forms.TextBox textBoxPrice;
         private System.Windows.Forms.ComboBox comboBoxCategory;
         private System.Windows.Forms.PictureBox pictureBoxLargestItem;
+        private System.Windows.Forms.PictureBox pictureBoxLargestGroup;
     }
 }
 

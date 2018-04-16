@@ -47,34 +47,22 @@ namespace BudgetTracking
             }
 
             //Set bitmap images
-            Bitmap img = new Bitmap(relLogo + "\\Sheet1 Total Chart.bmp");
+            Bitmap img = new Bitmap(relLogo + "\\Sheet1 Chart 4.bmp");
             this.pictureBoxLargestItem.Image = img;
+            img = new Bitmap(relLogo + "\\Sheet1 Chart 3.bmp");
+            this.pictureBoxLargestGroup.Image = img;
+
+
+
+            //Close excel objects
+            MyBook.Close();
+            
             
         }
 
         private void buttonSubmitInfo_Click(object sender, EventArgs e)
         {
-            object misValue = System.Reflection.Missing.Value;
-
-            MyBook = MyApp.Workbooks.Open("C:\\Users\\Jeremy\\Documents\\GitHub\\BudgetTracking\\BudgetTracking\\PriceTracking.xlsx");
-            MySheet = MyBook.Sheets[1];
-            
-
-            Excel.ChartObjects xlCharts = (Excel.ChartObjects)MySheet.ChartObjects(Type.Missing);
-            //Excel.ChartObject myChart = (Excel.ChartObject)xlCharts.Add(10, 80, 300, 250);
-            
-            //Excel.Chart chartPage = myChart.Chart;
-
-            //chartRange = MySheet.get_Range("V2", "W9");
-            //chartPage.SetSourceData(chartRange, misValue);
-            //chartPage.ChartType = Excel.XlChartType.xlColumnClustered;
-
-          foreach (Excel.ChartObject co in xlCharts)
-            {
-                co.Select();
-                Excel.Chart chart = (Excel.Chart)co.Chart;
-                chart.Export("C:\\Users\\Jeremy\\Documents\\GitHub\\BudgetTracking\\BudgetTracking\\" + @"\" + chart.Name + ".bmp", "BMP", false);
-            }
+           
         }
 }
 }
