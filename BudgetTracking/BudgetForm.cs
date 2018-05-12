@@ -54,6 +54,16 @@ namespace BudgetTracking
 
 
 
+            //Populate DropdownList
+            comboBoxCategory.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxCategory.Items.Add("Food");
+            comboBoxCategory.Items.Add("Gas");
+            comboBoxCategory.Items.Add("Groceries");
+            comboBoxCategory.Items.Add("Bills");
+            comboBoxCategory.Items.Add("Fun");
+            comboBoxCategory.Items.Add("Other");
+            comboBoxCategory.Items.Add("Car");
+
             //Close excel objects
             MyBook.Close();
             
