@@ -64,6 +64,10 @@ namespace BudgetTracking
             comboBoxCategory.Items.Add("Other");
             comboBoxCategory.Items.Add("Car");
 
+
+            //Setup Labels
+            labelPeriodEnd.Text = getDaysUntilPeriod().ToString() + " days from now.";
+
             //Close excel objects
             MyBook.Close();
             
@@ -74,5 +78,25 @@ namespace BudgetTracking
         {
            
         }
-}
+
+        //Strip menu Item to clear Excel file ***Can also call for first of every month
+        private void clearFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public static int getDaysUntilPeriod()
+        {
+            int day = DateTime.Today.Day;
+            if(day <= 15)
+            {
+                return (day - 15) * -1;
+            }
+            else
+            {
+                return (day - 30) * -1;
+            }
+        }
+
+    }
 }

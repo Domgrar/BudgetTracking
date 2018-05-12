@@ -48,8 +48,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.labelAmountLeftPaycheck = new System.Windows.Forms.Label();
+            this.labelSpentPaycheck = new System.Windows.Forms.Label();
+            this.labelMonthProfit = new System.Windows.Forms.Label();
+            this.labelPeriodEnd = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clearFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLargestItem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLargestGroup)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelSingleItem
@@ -245,12 +253,81 @@
             this.label4.TabIndex = 24;
             this.label4.Text = "Paycheck Period Ends:";
             // 
+            // labelAmountLeftPaycheck
+            // 
+            this.labelAmountLeftPaycheck.AutoSize = true;
+            this.labelAmountLeftPaycheck.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAmountLeftPaycheck.Location = new System.Drawing.Point(890, 143);
+            this.labelAmountLeftPaycheck.Name = "labelAmountLeftPaycheck";
+            this.labelAmountLeftPaycheck.Size = new System.Drawing.Size(57, 21);
+            this.labelAmountLeftPaycheck.TabIndex = 25;
+            this.labelAmountLeftPaycheck.Text = "label5";
+            // 
+            // labelSpentPaycheck
+            // 
+            this.labelSpentPaycheck.AutoSize = true;
+            this.labelSpentPaycheck.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSpentPaycheck.Location = new System.Drawing.Point(890, 237);
+            this.labelSpentPaycheck.Name = "labelSpentPaycheck";
+            this.labelSpentPaycheck.Size = new System.Drawing.Size(57, 21);
+            this.labelSpentPaycheck.TabIndex = 26;
+            this.labelSpentPaycheck.Text = "label6";
+            // 
+            // labelMonthProfit
+            // 
+            this.labelMonthProfit.AutoSize = true;
+            this.labelMonthProfit.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMonthProfit.Location = new System.Drawing.Point(890, 319);
+            this.labelMonthProfit.Name = "labelMonthProfit";
+            this.labelMonthProfit.Size = new System.Drawing.Size(57, 21);
+            this.labelMonthProfit.TabIndex = 27;
+            this.labelMonthProfit.Text = "label7";
+            // 
+            // labelPeriodEnd
+            // 
+            this.labelPeriodEnd.AutoSize = true;
+            this.labelPeriodEnd.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPeriodEnd.Location = new System.Drawing.Point(1003, 371);
+            this.labelPeriodEnd.Name = "labelPeriodEnd";
+            this.labelPeriodEnd.Size = new System.Drawing.Size(57, 21);
+            this.labelPeriodEnd.TabIndex = 28;
+            this.labelPeriodEnd.Text = "label8";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1162, 24);
+            this.menuStrip1.TabIndex = 29;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.clearFileToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // clearFileToolStripMenuItem
+            // 
+            this.clearFileToolStripMenuItem.Name = "clearFileToolStripMenuItem";
+            this.clearFileToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.clearFileToolStripMenuItem.Text = "Clear File";
+            this.clearFileToolStripMenuItem.Click += new System.EventHandler(this.clearFileToolStripMenuItem_Click);
+            // 
             // BudgetForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1162, 714);
+            this.Controls.Add(this.labelPeriodEnd);
+            this.Controls.Add(this.labelMonthProfit);
+            this.Controls.Add(this.labelSpentPaycheck);
+            this.Controls.Add(this.labelAmountLeftPaycheck);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -271,11 +348,15 @@
             this.Controls.Add(this.labelBudgetInfo);
             this.Controls.Add(this.labelGroup);
             this.Controls.Add(this.labelSingleItem);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "BudgetForm";
             this.Text = "BudgetTracking";
             this.Load += new System.EventHandler(this.BudgetForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLargestItem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLargestGroup)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -303,6 +384,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelAmountLeftPaycheck;
+        private System.Windows.Forms.Label labelSpentPaycheck;
+        private System.Windows.Forms.Label labelMonthProfit;
+        private System.Windows.Forms.Label labelPeriodEnd;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clearFileToolStripMenuItem;
     }
 }
 
